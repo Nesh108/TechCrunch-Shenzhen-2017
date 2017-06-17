@@ -5,36 +5,50 @@
     density="hdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="292889206327533"
+    timestamp="307841832324302"
     token="2157928666139961447"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="52" />
+        duration="88" />
     <task
         name="instant-run-dex"
-        duration="323" />
+        duration="549" />
     <task
         name="instant-run-transform"
-        duration="6" />
+        duration="19" />
     <task
         name="verifier"
-        duration="1" />
+        duration="2" />
 
     <artifact
         location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/reload-dex/debug/classes.dex"
         type="RELOAD_DEX" />
 
     <build
-        timestamp="292877137080297"
+        timestamp="307186567175907"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/outputs/apk/segway-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="292889206327533"
+        timestamp="307631405904949"
+        verifier="METHOD_ADDED" >
+        <artifact
+            location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="307675394093334"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/builds/debug/307675394093334/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="307841832324302"
         verifier="COMPATIBLE" >
         <artifact
             location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/reload-dex/debug/classes.dex"

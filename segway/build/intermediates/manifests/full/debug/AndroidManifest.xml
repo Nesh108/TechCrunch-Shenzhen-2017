@@ -18,6 +18,32 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" /> <!-- TODO make this not required again after android.hardware.camera.any is available -->
+    <!-- Donut-specific flags which allow us to run on any dpi screens. -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -37,6 +63,22 @@
         <meta-data
             android:name="packageTo2"
             android:value="com.segway.robot.mobilesample" />
+
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.google.zxing.client.android.HelpActivity"
+            android:label="@string/zxing_menu_help"
+            android:screenOrientation="user"
+            android:stateNotNeeded="true" />
+        <activity
+            android:name="com.google.zxing.client.android.encode.EncodeActivity"
+            android:screenOrientation="user" />
     </application>
 
 </manifest>

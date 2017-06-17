@@ -23,7 +23,7 @@
         android:theme="@android:style/Theme.Holo.Light" >
         <activity
             android:name="com.segway.robot.mobilesample.MainActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

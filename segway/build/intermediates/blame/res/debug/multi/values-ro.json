@@ -1,0 +1,406 @@
+[
+    {
+        "outputFile": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ro/values-ro.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 58,
+                    "endOffset": 109
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 58,
+                        "endOffset": 110
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 114,
+                    "endColumn": 55,
+                    "endOffset": 165
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 115,
+                        "endColumn": 55,
+                        "endOffset": 166
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 170,
+                    "endColumn": 51,
+                    "endOffset": 217
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 171,
+                        "endColumn": 51,
+                        "endOffset": 218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 222,
+                    "endColumn": 72,
+                    "endOffset": 290
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 223,
+                        "endColumn": 72,
+                        "endOffset": 291
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 295,
+                    "endColumn": 65,
+                    "endOffset": 356
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 296,
+                        "endColumn": 65,
+                        "endOffset": 357
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 361,
+                    "endColumn": 73,
+                    "endOffset": 430
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 362,
+                        "endColumn": 73,
+                        "endOffset": 431
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 435,
+                    "endColumn": 56,
+                    "endOffset": 487
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 436,
+                        "endColumn": 56,
+                        "endOffset": 488
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 492,
+                    "endColumn": 59,
+                    "endOffset": 547
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 493,
+                        "endColumn": 59,
+                        "endOffset": 548
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 552,
+                    "endColumn": 52,
+                    "endOffset": 600
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 553,
+                        "endColumn": 52,
+                        "endOffset": 601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 605,
+                    "endColumn": 69,
+                    "endOffset": 670
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 606,
+                        "endColumn": 69,
+                        "endOffset": 671
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 675,
+                    "endColumn": 67,
+                    "endOffset": 738
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 676,
+                        "endColumn": 67,
+                        "endOffset": 739
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 743,
+                    "endColumn": 50,
+                    "endOffset": 789
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 744,
+                        "endColumn": 50,
+                        "endOffset": 790
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 794,
+                    "endColumn": 55,
+                    "endOffset": 845
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 795,
+                        "endColumn": 55,
+                        "endOffset": 846
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 850,
+                    "endColumn": 108,
+                    "endOffset": 954
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 851,
+                        "endColumn": 108,
+                        "endOffset": 955
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 959,
+                    "endColumn": 59,
+                    "endOffset": 1014
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 960,
+                        "endColumn": 59,
+                        "endOffset": 1015
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1019,
+                    "endColumn": 59,
+                    "endOffset": 1074
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1020,
+                        "endColumn": 59,
+                        "endOffset": 1075
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1079,
+                    "endColumn": 116,
+                    "endOffset": 1191
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1080,
+                        "endColumn": 116,
+                        "endOffset": 1192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1196,
+                    "endColumn": 54,
+                    "endOffset": 1246
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1197,
+                        "endColumn": 54,
+                        "endOffset": 1247
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1251,
+                    "endColumn": 54,
+                    "endOffset": 1301
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1252,
+                        "endColumn": 54,
+                        "endOffset": 1302
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1306,
+                    "endColumn": 118,
+                    "endOffset": 1420
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1307,
+                        "endColumn": 118,
+                        "endOffset": 1421
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1425,
+                    "endColumn": 69,
+                    "endOffset": 1490
+                },
+                "from": {
+                    "file": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/values-ro/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 1426,
+                        "endColumn": 69,
+                        "endOffset": 1491
+                    }
+                }
+            }
+        ]
+    }
+]

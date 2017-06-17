@@ -122,18 +122,19 @@ public class MainActivity extends Activity {
                     }
                 });
             } else {
+                Log.d("H", "S");
                 //message received is BufferMessage, used a txt file to test receiving BufferMessage
                 final byte[] bytes = (byte[]) message.getContent();
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         try {
-                            Bitmap bm = Bitmap.createBitmap(240, 160, Bitmap.Config.RGB_565);
+                            Bitmap bm = Bitmap.createBitmap(320, 240, Bitmap.Config.RGB_565);
                             ByteBuffer buffer = ByteBuffer.wrap(bytes);
                             bm.copyPixelsFromBuffer(buffer);
                             previewRobot.setImageBitmap(bm);
                         }catch(Exception ex){
-
+                            ex.printStackTrace();
                         }
                     }
                 });

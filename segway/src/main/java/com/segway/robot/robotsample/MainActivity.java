@@ -3,6 +3,7 @@ package com.segway.robot.robotsample;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -16,9 +17,19 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.DecodeHintType;
+import com.google.zxing.LuminanceSource;
+import com.google.zxing.NotFoundException;
+import com.google.zxing.RGBLuminanceSource;
+import com.google.zxing.Result;
+import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.multi.qrcode.QRCodeMultiReader;
+import com.google.zxing.qrcode.QRCodeReader;
 import com.segway.robot.algo.Pose2D;
 import com.segway.robot.sdk.base.bind.ServiceBinder;
 import com.segway.robot.sdk.baseconnectivity.Message;
@@ -34,13 +45,22 @@ import com.segway.robot.sdk.vision.frame.Frame;
 import com.segway.robot.sdk.vision.stream.StreamInfo;
 import com.segway.robot.sdk.vision.stream.StreamType;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
+import java.util.Hashtable;
 
 public class MainActivity extends Activity {
 
@@ -48,9 +68,7 @@ public class MainActivity extends Activity {
     private int press = 0;
     private TextView textViewIp;
 
-    private TextView textViewId;
-    private TextView textViewTime;
-    private TextView textViewContent;
+    private ImageView preview;
     private RobotMessageRouter mRobotMessageRouter = null;
     private MessageConnection mMessageConnection = null;
 
@@ -59,6 +77,14 @@ public class MainActivity extends Activity {
     private boolean mBind;
 
     private String action = null;
+    private int score1 = 0;
+    private int score2 = 0;
+    private boolean dead = false;
+    private int frameCount = 0;
+    private StreamInfo colorInfo;
+    private MediaPlayer mp;
+    private boolean needsReset = true;
+    private boolean danceOn = false;
 
     private ServiceBinder.BindStateListener mBindStateListener = new ServiceBinder.BindStateListener() {
         @Override
@@ -135,9 +161,6 @@ public class MainActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        textViewId.setText(Integer.toString(message.getId()));
-                        textViewTime.setText(Long.toString(message.getTimestamp()));
-                        textViewContent.setText(message.getContent().toString());
                         switch (message.getContent().toString().toLowerCase()){
                             case "fwd":
                                 fwd();
@@ -170,9 +193,6 @@ public class MainActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        textViewId.setText(Integer.toString(message.getId()));
-                        textViewTime.setText(Long.toString(message.getTimestamp()));
-                        textViewContent.setText(name);
                         Toast.makeText(getApplicationContext(), "file saved: " + name, Toast.LENGTH_SHORT).show();
                     }
                 });
@@ -188,13 +208,11 @@ public class MainActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
         textViewIp = (TextView) findViewById(R.id.textView_ip);
 
-        textViewId = (TextView) findViewById(R.id.textView_id);
-        textViewTime = (TextView) findViewById(R.id.textView_time);
-        textViewContent = (TextView) findViewById(R.id.textView_content);
-        textViewContent.setMovementMethod(ScrollingMovementMethod.getInstance());
+        preview = (ImageView) findViewById(R.id.imageView);
 
         textViewIp.setText(getDeviceIp());
 
+        mp = MediaPlayer.create(getApplicationContext(), R.raw.victory);
         //get RobotMessageRouter
         mRobotMessageRouter = RobotMessageRouter.getInstance();
         //bind to connection service in robot
@@ -228,20 +246,92 @@ public class MainActivity extends Activity {
                 mBind = false;
             }
         });
+
     }
 
     Vision.FrameListener mFrameListener = new Vision.FrameListener() {
         @Override
         public void onNewFrame(int streamType, Frame frame) {
+            if(needsReset) {
+                // Reset Score
+                score1 = -1;
+                score2 = -1;
+                setStatus("1");
+                setStatus("2");
+                needsReset = false;
+            }
+
             Runnable runnable = null;
             switch (streamType) {
                 case StreamType.COLOR:
-                    Bitmap bm = Bitmap.createBitmap(640, 480, Bitmap.Config.RGB_565);
+                    Bitmap bm = Bitmap.createBitmap(colorInfo.getWidth(), colorInfo.getHeight(), Bitmap.Config.RGB_565);
+                    final Bitmap bmp = Bitmap.createBitmap(colorInfo.getWidth(), colorInfo.getHeight(), Bitmap.Config.ARGB_8888);
+                    bmp.copyPixelsFromBuffer(frame.getByteBuffer());
+                    runnable = new Runnable() {
+                        @Override
+                        public void run() {
+                            preview.setImageBitmap(bmp);
+                        }
+                    };
+
+                    if(dead) {
+                        frameCount++;
+
+                        if(frameCount >= 500) {
+                            dead = false;
+                            frameCount = 0;
+                            mp.stop();
+                        } else if(frameCount < 90) {
+                            rr();
+                        } else if(frameCount < 350) {
+                            if(danceOn) {
+                                rr();
+                            } else {
+                                rl();
+                            }
+
+                            if(frameCount%2 == 0) {
+                                fwd();
+                            } else {
+                                back();
+                            }
+                            danceOn = !danceOn;
+                        } else {
+                            stop();
+                        }
+                        return;
+                    }
+
+                    int[] intArray = new int[bmp.getWidth() * bmp.getHeight()];
+                    //copy pixel data from the Bitmap into the 'intArray' array
+                    bmp.getPixels(intArray, 0, bmp.getWidth(), 0, 0, bmp.getWidth(), bmp.getHeight());
+
+                    LuminanceSource source = new RGBLuminanceSource(bmp.getWidth(), bmp.getHeight(), intArray);
+                    BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+
+                    QRCodeMultiReader decoder = new QRCodeMultiReader();
+
+                    try {
+                        Result result = decoder.decode(bitmap);
+                        if (result.getText().contains("SCORE")) {
+                            setStatus(result.getText().split("SCORE")[1]);
+                            dead = true;
+                            if(mp.isPlaying()){
+                                mp.stop();
+                            }
+                            mp.start();
+                        }
+                    } catch (NotFoundException e) {
+                    } catch (Exception ex) {
+                    }
+
+
                     ByteBuffer data = ByteBuffer.allocateDirect(frame.getByteBuffer().capacity());
                     data.put(frame.getByteBuffer());
                     ByteBuffer buffer = ByteBuffer.wrap(data.array());
                     bm.copyPixelsFromBuffer(buffer);
-                    Bitmap.createScaledBitmap(bm, 240, 160, false);
+
+                    bm = getResizedBitmap(bm, 320);
 
                     try {
                         int size = bm.getRowBytes() * bm.getHeight();
@@ -262,11 +352,56 @@ public class MainActivity extends Activity {
         }
     };
 
+
+    public Bitmap getResizedBitmap(Bitmap image, int maxSize) {
+        int width = image.getWidth();
+        int height = image.getHeight();
+
+        float bitmapRatio = (float) width / (float) height;
+        if (bitmapRatio > 1) {
+            width = maxSize;
+            height = (int) (width / bitmapRatio);
+        } else {
+            height = maxSize;
+            width = (int) (height * bitmapRatio);
+        }
+
+        return Bitmap.createScaledBitmap(image, width, height, true);
+    }
+
+    public void setStatus(String id) {
+        int score;
+        if(id.equals("1")) {
+            score1++;
+            score = score1;
+        } else {
+            score2++;
+            score = score2;
+        }
+
+        try {
+            HttpClient httpclient = new DefaultHttpClient();
+            Log.d("LAL", "doing...");
+            HttpGet req = new HttpGet();
+            URI website = new URI("http://10.1.0.132/laser_seg/set_teams.php?id=" + id + "&score=" + score);
+            req.setURI(website);
+            // Execute HTTP Post Request
+            HttpResponse response = httpclient.execute(req);
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
     private synchronized void startImageTransfer() {
         StreamInfo[] infos = mVision.getActivatedStreamInfo();
         for(StreamInfo info : infos) {
             switch (info.getStreamType()) {
                 case StreamType.COLOR:
+                    colorInfo = info;
                     mVision.startListenFrame(StreamType.COLOR, mFrameListener);
                     break;
             }

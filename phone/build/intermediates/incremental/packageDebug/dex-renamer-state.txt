@@ -1,7 +1,7 @@
-#Sat Jun 17 21:02:10 CST 2017
-base.0=/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_887a77ab6f8b6e20394761cdba94b637a07c5919
+#Sun Jun 18 01:14:37 CST 2017
+base.0=/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_852a7c556340b0bb655e661e846ef0c22fc7916f
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aa22722daba6138f4da32a16fbe7f7e17a04c1a8/classes.dex
-base.1=/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aa22722daba6138f4da32a16fbe7f7e17a04c1a8
-file.0=/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_887a77ab6f8b6e20394761cdba94b637a07c5919/classes.dex
+file.1=/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_51f29d8c85a2c4ded6d9309cc202eac05916560a/classes.dex
+base.1=/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_51f29d8c85a2c4ded6d9309cc202eac05916560a
+file.0=/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_852a7c556340b0bb655e661e846ef0c22fc7916f/classes.dex

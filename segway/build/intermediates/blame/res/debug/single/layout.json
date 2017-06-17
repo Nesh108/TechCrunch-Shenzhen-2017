@@ -1,6 +1,18 @@
 [
     {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/res/merged/debug/layout/zxing_capture.xml",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/layout/zxing_capture.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/res/merged/debug/layout/zxing_encode.xml",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/layout/zxing_encode.xml"
+    },
+    {
         "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/res/merged/debug/layout/zxing_help.xml",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/layout/zxing_help.xml"
     }
 ]

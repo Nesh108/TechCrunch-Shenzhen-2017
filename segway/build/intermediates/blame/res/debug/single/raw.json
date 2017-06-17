@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/res/merged/debug/raw/zxing_beep.ogg",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.embarkmobile/zxing-android-minimal/2.0.0/res/raw/zxing_beep.ogg"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/res/merged/debug/raw/victory.mp3",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/src/main/res/raw/victory.mp3"
+    }
+]

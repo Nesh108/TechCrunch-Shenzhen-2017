@@ -5,54 +5,40 @@
     density="420dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="292927687311841"
-    token="-6355160307574755050"
-    verifier="COMPATIBLE" >
+    timestamp="307833283386162"
+    token="8857637543167084690"
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="36" />
+        duration="37" />
     <task
         name="instant-run-dex"
-        duration="309" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="4" />
+        duration="3" />
     <task
         name="verifier"
         duration="0" />
 
     <artifact
-        location="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="292560508222877"
+        timestamp="307713169349537"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/user/Desktop/ConnectivitySample_Phone/build/outputs/apk/ConnectivitySample_Phone-debug.apk"
+            location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/outputs/apk/phone-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="292898395379971"
+        timestamp="307833283386162"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+            location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
             type="DEX" />
-    </build>
-    <build
-        timestamp="292919140363668"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/builds/debug/292919140363668/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="292927687311841"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>
