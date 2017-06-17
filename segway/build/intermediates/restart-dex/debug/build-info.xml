@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86_64,x86,armeabi-v7a,armeabi,arm64-v8a"
+    api-level="22"
+    density="hdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="292889206327533"
+    token="2157928666139961447"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="52" />
+    <task
+        name="instant-run-dex"
+        duration="323" />
+    <task
+        name="instant-run-transform"
+        duration="6" />
+    <task
+        name="verifier"
+        duration="1" />
+
+    <artifact
+        location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="292877137080297"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/outputs/apk/segway-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="292889206327533"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="eeac14c70c6fd41b9d9d8be7dde075adb8037075">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_aa22722daba6138f4da32a16fbe7f7e17a04c1a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/exploded-aar/com.segway.robot/sdkbase/0.1.37/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="95d8851392a0847eeeae622a9a30bc4a8290c158">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-sdkbase-0.1.37_8466b60db118b9ce6f77e11a4417aa84135f9859/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="50e841498b046267709693b769335eee8294b368">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-base-connectivity-sdk-0.5.18_87e03aad45f0f65e848431b6b5da7c263a8ed6eb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="656a9646dd414b92a574de3b3fa9a9d06d85489f">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_887a77ab6f8b6e20394761cdba94b637a07c5919/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/exploded-aar/com.segway.robot/mobile-connectivity-sdk/0.5.18/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2b6e8d907049d5946aeb56148c5a462b2ab6ea6e">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-mobile-connectivity-sdk-0.5.18_8c39d78052dfea251433259033b34646306232c9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/libs/mina-core-2.0.13.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e442feab40134d77aab0af454ca1528427c67158">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/mina-core-2.0.13_3dc494aa979c79314a5190025d47d4791dca63d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/libs/slf4j-nop-1.7.14.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9da43afb34b0cc4cfb0b5afef9e5b8f2e155e0e">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/slf4j-nop-1.7.14_225a039b83a88c9fda1320af6ac4a91df707ec41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/libs/slf4j-api-1.7.14.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1bdf26979864b3605d61bfbde664474dbe52b13a">
+        <dex dex="/Users/user/Desktop/ConnectivitySample_Phone/build/intermediates/transforms/dex/debug/folders/1000/10/slf4j-api-1.7.14_cc0a707ef6a64e4625ecefd72847cc22033858ce/classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,7 @@
+#Sat Jun 17 21:07:22 CST 2017
+base.0=/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9eca97ccc08a9da19431c3add2c0148dfd912347
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b724a30c2ae41f448ff4624efb18587af04ed1b2/classes.dex
+base.1=/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b724a30c2ae41f448ff4624efb18587af04ed1b2
+file.0=/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9eca97ccc08a9da19431c3add2c0148dfd912347/classes.dex

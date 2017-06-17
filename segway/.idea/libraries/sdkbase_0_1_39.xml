@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="sdkbase-0.1.39">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.segway.robot/sdkbase/0.1.39/res" />
+      <root url="jar://$PROJECT_DIR$/build/intermediates/exploded-aar/com.segway.robot/sdkbase/0.1.39/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.segway.robot/sdkbase/0.1.39/7c8245d4bb3f5b18b51598f034d34d856e1664bc/sdkbase-0.1.39-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
