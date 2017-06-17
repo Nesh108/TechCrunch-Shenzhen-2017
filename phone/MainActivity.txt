@@ -1,0 +1,198 @@
+ package com.kulplex.opencv_test;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.SurfaceView;
+import android.view.WindowManager;
+
+import com.google.zxing.BinaryBitmap;
+import com.google.zxing.DecodeHintType;
+import com.google.zxing.LuminanceSource;
+import com.google.zxing.NotFoundException;
+import com.google.zxing.RGBLuminanceSource;
+import com.google.zxing.Result;
+import com.google.zxing.common.HybridBinarizer;
+import com.google.zxing.multi.qrcode.QRCodeMultiReader;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.opencv.android.BaseLoaderCallback;
+import org.opencv.android.CameraBridgeViewBase;
+import org.opencv.android.CameraBridgeViewBase.CvCameraViewFrame;
+import org.opencv.android.CameraBridgeViewBase.CvCameraViewListener2;
+import org.opencv.android.LoaderCallbackInterface;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.android.Utils;
+import org.opencv.core.Mat;
+import org.opencv.core.Scalar;
+import org.opencv.imgcodecs.Imgcodecs;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Hashtable;
+
+public class MainActivity extends Activity implements CvCameraViewListener2 {
+    private static final String TAG = "OCVSample::Activity";
+
+    private CameraBridgeViewBase mOpenCvCameraView;
+    private boolean dead = false;
+    private int frameCount = 0;
+    private Mat background;
+
+    private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
+        @Override
+        public void onManagerConnected(int status) {
+            switch (status) {
+                case LoaderCallbackInterface.SUCCESS: {
+                    Log.i(TAG, "OpenCV loaded successfully");
+                    mOpenCvCameraView.enableView();
+                }
+                break;
+                default: {
+                    super.onManagerConnected(status);
+                }
+                break;
+            }
+        }
+    };
+
+    public MainActivity() {
+        Log.i(TAG, "Instantiated new " + this.getClass());
+    }
+
+    /**
+     * Called when the activity is first created.
+     */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        Log.i(TAG, "called onCreate");
+        super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        setContentView(R.layout.activity_main);
+
+        mOpenCvCameraView = (CameraBridgeViewBase) findViewById(R.id.tutorial1_activity_java_surface_view);
+        mOpenCvCameraView.setCameraIndex(-1);
+        mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
+        mOpenCvCameraView.setMaxFrameSize(800, 400);
+        mOpenCvCameraView.setCvCameraViewListener(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (mOpenCvCameraView != null)
+            mOpenCvCameraView.disableView();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (!OpenCVLoader.initDebug()) {
+            Log.d(TAG, "Internal OpenCV library not found. Using OpenCV Manager for initialization");
+            OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_3_2_0, this, mLoaderCallback);
+        } else {
+            Log.d(TAG, "OpenCV library found inside package. Using it!");
+            mLoaderCallback.onManagerConnected(LoaderCallbackInterface.SUCCESS);
+        }
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+        if (mOpenCvCameraView != null)
+            mOpenCvCameraView.disableView();
+    }
+
+    public void onCameraViewStarted(int width, int height) {
+    }
+
+    public void onCameraViewStopped() {
+    }
+
+    public Mat onCameraFrame(CvCameraViewFrame inputFrame) {
+
+        if(background == null ){
+            try {
+                background = Utils.loadResource(this, R.drawable.fire2, Imgcodecs.CV_LOAD_IMAGE_COLOR);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        if (!dead) {
+            findQR(inputFrame.rgba());
+            Mat f = inputFrame.rgba().setTo(new Scalar(10, 255, 10));
+            //background.copyTo(f.rowRange(0, (int)background.size().height).colRange(0, (int)background.size().width));
+            return f;
+
+        } else {
+            frameCount++;
+
+            if (frameCount > 250) {
+                setStatus("1", "1");
+                dead = false;
+                frameCount = 0;
+            }
+
+            Mat f = inputFrame.rgba().setTo(new Scalar(255, 10, 10));
+            //background.copyTo(f);
+            return f;
+        }
+
+    }
+
+    public boolean findQR(Mat frame) {
+        Bitmap b = Bitmap.createBitmap(frame.cols(), frame.rows(), Bitmap.Config.ARGB_8888);
+        Utils.matToBitmap(frame, b);
+
+        int[] intArray = new int[b.getWidth() * b.getHeight()];
+        //copy pixel data from the Bitmap into the 'intArray' array
+        b.getPixels(intArray, 0, b.getWidth(), 0, 0, b.getWidth(), b.getHeight());
+
+        LuminanceSource source = new RGBLuminanceSource(b.getWidth(), b.getHeight(), intArray);
+        BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
+
+        QRCodeMultiReader decoder = new QRCodeMultiReader();
+
+        Hashtable<DecodeHintType, Object> decodeHints = new Hashtable<>();
+        decodeHints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);
+
+        try {
+            Result result = decoder.decode(bitmap, decodeHints);
+            if (result.getText().equals("SHOT")) {
+                setStatus("1", "0");
+                dead = true;
+            }
+        } catch (NotFoundException e) {
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return true;
+    }
+
+    public void setStatus(String id, String status) {
+        try {
+            HttpClient httpclient = new DefaultHttpClient();
+            Log.d("LAL", "doing...");
+            HttpGet req = new HttpGet();
+            URI website = new URI("http://10.1.0.132/laser_seg/set_player.php?id=" + id + "&status=" + status);
+
+            req.setURI(website);
+            // Execute HTTP Post Request
+            HttpResponse response = httpclient.execute(req);
+        } catch (ClientProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
