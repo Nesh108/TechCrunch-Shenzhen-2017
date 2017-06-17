@@ -1,0 +1,26 @@
+html {
+	background: #1f1f1f;
+	height: 100%;
+}
+
+.text {
+	color: #fff;
+	margin: 20px;
+}
+
+.table-container {
+	width: 75%;
+}
+
+table, th, td {
+    border: 2px solid white;
+    border-collapse:collapse;
+    table-layout: fixed;
+}
+
+.table td {
+	width: '25%';
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+}

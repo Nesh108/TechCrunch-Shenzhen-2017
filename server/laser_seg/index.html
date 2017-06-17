@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LaserSeg</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css" />
+<link rel="stylesheet" type="text/css" href="main.css" />
+<body>
+<center>
+<h1 class="title is-1 text"><b>PLAYERS</b></h1>
+<h3 class="title is-3 text">Team 1 [ <span class="score1"></span> ]</h3>
+<div class="table-container">
+<table class="table">
+	<thead>
+		<tr><td><b>NAME</b></td><td><b>STATUS</b></td><td><b>ROLE</b></td><td><b>BANNER</b></td></tr>
+	</thead>
+	<tbody>
+		<tr class="p1"></tr>
+		<tr class="p2"></tr>
+	</tbody>
+</table>
+
+<h3 class="title is-3 text">Team 2 [ <span class="score2"></span> ]</h3>
+<table class="table">
+	<thead>
+		<tr><td><b>NAME</b></td><td><b>STATUS</b></td><td><b>ROLE</b></td><td><b>BANNER</b></td></tr>
+	</thead>
+	<tbody>
+		<tr class="p3"></tr>
+		<tr class="p4"></tr>
+	</tbody>
+</table>
+</div>
+</center>
+</body>
+<script src="./jquery-3.2.1.min.js" type="text/javascript"></script>
+
+<script> 
+	$(document).ready(function() {
+		function update() {
+			$.ajax("./get_players.php", {
+		      success: function(data) {
+		      	 let players = JSON.parse(data);
+		      	 for(let i = 1; i <= 4; i++) {
+		      	 	let row_color = "bgcolor='#4caf50'";
+		      	 	if(players[i].status !== "ALIVE") {
+						row_color = "bgcolor='#f44336'";
+		      	 	}
+
+			        $(".p" + i).html("<td " + row_color + "><b>" + players[i].name + "</b></td><td " + row_color + "><b>" + players[i].status + "</b></td><td " + row_color + "><b>" + players[i].role + "</b></td><td " + row_color + "><b><img src='data:image/jpeg;base64," + players[i].banner + "'/></b></td>");
+		      	 	}
+		      },
+		      error: function() {
+		      }
+		   });
+
+			$.ajax("./get_teams.php", {
+		      success: function(data) {
+		      	 let teams = JSON.parse(data);
+		      	 for(let i = 1; i <= 4; i++) {
+			        	$(".score" + i).html('<b>' + teams[i].score + '</b>');
+		      	 	}
+		      },
+		      error: function() {
+		      }
+		   });
+				
+		}
+		var auto_refresh = setInterval(update, 1000);
+		update();
+   });
+</script>
+</html>
