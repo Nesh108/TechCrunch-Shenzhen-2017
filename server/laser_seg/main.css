@@ -24,3 +24,8 @@ table, th, td {
 	text-align: center;
 	vertical-align: middle;
 }
+
+.title2 {
+	font-weight: bold;
+	font-size: 100px;
+}
