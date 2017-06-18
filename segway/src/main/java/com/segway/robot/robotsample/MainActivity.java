@@ -85,6 +85,7 @@ public class MainActivity extends Activity {
     private MediaPlayer mp;
     private boolean needsReset = true;
     private boolean danceOn = false;
+    MediaPlayer player;
 
     private ServiceBinder.BindStateListener mBindStateListener = new ServiceBinder.BindStateListener() {
         @Override
@@ -177,6 +178,9 @@ public class MainActivity extends Activity {
                             case "stop":
                                 stop();
                                 break;
+                            case "play":
+                                player.start();
+                                break;
                         }
 
 
@@ -213,6 +217,9 @@ public class MainActivity extends Activity {
         textViewIp.setText(getDeviceIp());
 
         mp = MediaPlayer.create(getApplicationContext(), R.raw.victory);
+        mp.setVolume(100, 100);
+        player = MediaPlayer.create(MainActivity.this, R.raw.audio);
+        player.setVolume(100, 100);
         //get RobotMessageRouter
         mRobotMessageRouter = RobotMessageRouter.getInstance();
         //bind to connection service in robot
@@ -313,8 +320,15 @@ public class MainActivity extends Activity {
 
                     try {
                         Result result = decoder.decode(bitmap);
-                        if (result.getText().contains("SCORE")) {
-                            setStatus(result.getText().split("SCORE")[1]);
+                        if (result.getText().contains("weixin")) {
+                            setStatus("1");
+                            dead = true;
+                            if(mp.isPlaying()){
+                                mp.stop();
+                            }
+                            mp.start();
+                        } else {
+                            setStatus("2");
                             dead = true;
                             if(mp.isPlaying()){
                                 mp.stop();

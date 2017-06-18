@@ -2,6 +2,7 @@ package com.segway.robot.mobilesample;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.method.ScrollingMovementMethod;
@@ -45,7 +46,6 @@ public class MainActivity extends Activity {
     private Button rrButton;
     private Button stopButton;
 
-    private ImageView previewRobot;
 
     private int press = 0;
     private MobileMessageRouter mMobileMessageRouter = null;
@@ -132,7 +132,7 @@ public class MainActivity extends Activity {
                             Bitmap bm = Bitmap.createBitmap(320, 240, Bitmap.Config.RGB_565);
                             ByteBuffer buffer = ByteBuffer.wrap(bytes);
                             bm.copyPixelsFromBuffer(buffer);
-                            previewRobot.setImageBitmap(bm);
+//                            previewRobot.setImageBitmap(bm);
                         }catch(Exception ex){
                             ex.printStackTrace();
                         }
@@ -164,7 +164,7 @@ public class MainActivity extends Activity {
         //get the MobileMessageRouter instance
         mMobileMessageRouter = MobileMessageRouter.getInstance();
 
-        previewRobot = (ImageView) findViewById(R.id.imageView);
+//        previewRobot = (ImageView) findViewById(R.id.imageView);
         fwdButton = (Button) findViewById(R.id.fwd_btn);
         fwdButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -336,6 +336,17 @@ public class MainActivity extends Activity {
         press++;
         if (press == 2) {
             super.onBackPressed();
+        }
+    }
+
+    public void playSound(View v) {
+        try {
+            //message sent is StringMessage
+            mMessageConnection.sendMessage(new StringMessage("play"));
+        } catch (MobileException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

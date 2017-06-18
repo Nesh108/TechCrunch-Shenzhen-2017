@@ -1,4 +1,4 @@
-#Sun Jun 18 01:14:37 CST 2017
+#Sun Jun 18 08:08:10 CST 2017
 base.0=/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_852a7c556340b0bb655e661e846ef0c22fc7916f
 renamed.1=classes.dex
 renamed.0=classes2.dex

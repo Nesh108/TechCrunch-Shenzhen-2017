@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="25"
-    density="420dpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="307833283386162"
+    timestamp="326488988711973"
     token="8857637543167084690"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="37" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="3" />
+        duration="0" />
     <task
         name="verifier"
         duration="0" />
 
-    <artifact
-        location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-        type="DEX" />
-
     <build
-        timestamp="307713169349537"
+        timestamp="325803759890277"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/outputs/apk/phone-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="307833283386162"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-            type="DEX" />
-    </build>
+        timestamp="326488988711973"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

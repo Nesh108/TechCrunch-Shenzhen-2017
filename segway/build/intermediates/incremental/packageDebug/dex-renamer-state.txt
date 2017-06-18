@@ -1,4 +1,4 @@
-#Sun Jun 18 01:07:04 CST 2017
+#Sun Jun 18 08:37:22 CST 2017
 base.0=/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b724a30c2ae41f448ff4624efb18587af04ed1b2
 renamed.1=classes.dex
 renamed.0=classes2.dex

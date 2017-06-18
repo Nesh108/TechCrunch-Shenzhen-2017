@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="cd08e9ee06efe786a9105a3494161ead07d24fc4">
+        sha1="0da70678613f348bcf2f11a50d2bfe502e10f3c8">
         <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9eca97ccc08a9da19431c3add2c0148dfd912347/classes.dex" />
     </item>
     <item
@@ -117,15 +117,6 @@
         revision="24.0.2"
         sha1="1bdf26979864b3605d61bfbde664474dbe52b13a">
         <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/slf4j-api-1.7.14_dc0c4518c226fcf61cfb5b84622499692d405b7a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.segway.robot/basic-class/0.5.38/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="bea15497f6eb33051d3c3ff2224be0d93c0d6df9">
-        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-basic-class-0.5.38_15796483fe3f328c057b32c68d627c06f5b4d36a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -147,12 +138,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/exploded-aar/com.segway.robot/basic-class/0.5.38/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="c983e054111c695f04169d6b63b6403ab692a473">
-        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b724a30c2ae41f448ff4624efb18587af04ed1b2/classes.dex" />
+        sha1="bea15497f6eb33051d3c3ff2224be0d93c0d6df9">
+        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-basic-class-0.5.38_15796483fe3f328c057b32c68d627c06f5b4d36a/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -162,6 +153,15 @@
         revision="24.0.2"
         sha1="37d24b48931e82ed5eaee3971d829522a98d9100">
         <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-visionsdk-0.6.30_6ffa723f3474d75c3f6851182f7415edba2ea82f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b1131b3fb399220629d6f6890ac064a78d41986d">
+        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/segway/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b724a30c2ae41f448ff4624efb18587af04ed1b2/classes.dex" />
     </item>
 
 </items>

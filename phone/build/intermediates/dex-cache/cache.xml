@@ -3,38 +3,11 @@
 
     <item
         is-multidex="true"
-        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/exploded-aar/com.segway.robot/sdkbase/0.1.37/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="95d8851392a0847eeeae622a9a30bc4a8290c158">
-        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-sdkbase-0.1.37_0111e1cc48c8ddc3125fb0959dea8fb805e1d36f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/libs/slf4j-nop-1.7.14.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9da43afb34b0cc4cfb0b5afef9e5b8f2e155e0e">
-        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/slf4j-nop-1.7.14_598d5cb29c43d34ad93c08c301563fc10df8b198/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/libs/mina-core-2.0.13.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e442feab40134d77aab0af454ca1528427c67158">
-        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/mina-core-2.0.13_b9f9641d2d3c8072a662e2b97e67adfc45da67bf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="f3926291cb32bcff9872c4717aa6aa62692f201b">
+        sha1="74235a1d162669c8e4443a190701e73bcaccd133">
         <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_852a7c556340b0bb655e661e846ef0c22fc7916f/classes.dex" />
     </item>
     <item
@@ -61,8 +34,35 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="eeb77755df61ea8f1e2dce50eb0d02ba9e767779">
+        sha1="f1c47002174e33ac828b10268f9e59aa991be7a5">
         <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_51f29d8c85a2c4ded6d9309cc202eac05916560a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/exploded-aar/com.segway.robot/sdkbase/0.1.37/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="95d8851392a0847eeeae622a9a30bc4a8290c158">
+        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/com.segway.robot-sdkbase-0.1.37_0111e1cc48c8ddc3125fb0959dea8fb805e1d36f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/libs/slf4j-nop-1.7.14.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9da43afb34b0cc4cfb0b5afef9e5b8f2e155e0e">
+        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/slf4j-nop-1.7.14_598d5cb29c43d34ad93c08c301563fc10df8b198/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/exploded-aar/com.segway.robot/base-connectivity-sdk/0.5.18/jars/libs/mina-core-2.0.13.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e442feab40134d77aab0af454ca1528427c67158">
+        <dex dex="/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/transforms/dex/debug/folders/1000/10/mina-core-2.0.13_b9f9641d2d3c8072a662e2b97e67adfc45da67bf/classes.dex" />
     </item>
     <item
         is-multidex="true"

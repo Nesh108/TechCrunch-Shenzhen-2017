@@ -6,65 +6,86 @@
                 tools:context="com.segway.robot.mobilesample.MainActivity">
 
 
-    <Button
-        android:id="@+id/stop_btn"
-        android:layout_height="wrap_content"
-        android:text="STOP"
-        android:textStyle="normal|bold"
-        android:layout_width="wrap_content"
-        android:layout_above="@+id/back_btn"
-        android:layout_alignEnd="@+id/fwd_btn"
-        android:layout_marginBottom="71dp" />
-
-    <Button
-        android:id="@+id/rr_btn"
-        android:layout_height="wrap_content"
-        android:text="right"
-        android:textStyle="normal|bold"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_alignBaseline="@+id/stop_btn"
-        android:layout_alignBottom="@+id/stop_btn"
+    <ImageView
+        android:src="@mipmap/bg_emp"
+        android:id="@+id/imageView"
+        android:layout_width="2560dp"
+        android:layout_height="1600dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:background="@mipmap/bg"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
-    <Button
-        android:id="@+id/rl_btn"
-        android:layout_height="wrap_content"
-        android:text="left"
-        android:textStyle="normal|bold"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_alignBaseline="@+id/stop_btn"
-        android:layout_alignBottom="@+id/stop_btn"
-        android:layout_toEndOf="@+id/back_btn" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/fwd_btn"
-        android:layout_height="wrap_content"
-        android:text="up"
-        android:textStyle="normal|bold"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="44dp"
-        android:layout_above="@+id/stop_btn"
-        android:layout_toEndOf="@+id/rr_btn" />
+        <Button
+            android:id="@+id/shoot"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:textAppearance="@android:style/TextAppearance"
+            android:background="@mipmap/stop"
+            android:layout_marginTop="480dp"
+            android:layout_marginStart="1140dp"
+            android:onClick="playSound"
+            android:textSize="24sp" />
+    </RelativeLayout>
 
-    <Button
-        android:id="@+id/back_btn"
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="down"
-        android:layout_marginBottom="275dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/fwd_btn" />
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
-    <ImageView
-        android:src="@android:drawable/alert_dark_frame"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/imageView"
-        android:layout_marginTop="12dp"
-        android:layout_alignParentTop="true" />
+        <Button
+            android:id="@+id/stop_btn"
+            android:layout_height="48dp"
+            android:textStyle="normal|bold"
+            android:layout_width="48dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginStart="160dp"
+            android:background="@mipmap/stop" />
 
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="440dp"
+            android:background="@mipmap/down" />
+
+        <Button
+            android:id="@+id/fwd_btn"
+            android:layout_height="48dp"
+            android:textStyle="normal|bold"
+            android:layout_marginStart="160dp"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="320dp"
+            android:background="@mipmap/up"
+            android:layout_width="48dp" />
+
+        <Button
+            android:id="@+id/rl_btn"
+            android:layout_height="48dp"
+            android:textStyle="normal|bold"
+            android:layout_width="48dp"
+            android:layout_marginTop="380dp"
+            android:layout_alignParentStart="false"
+            android:layout_marginStart="100dp"
+            android:background="@mipmap/l" />
+
+        <Button
+            android:id="@+id/rr_btn"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+            android:layout_marginTop="380dp"
+            android:textAppearance="@android:style/TextAppearance"
+            android:layout_marginStart="220dp"
+            android:background="@mipmap/r" />
+    </RelativeLayout>
 
 </RelativeLayout>

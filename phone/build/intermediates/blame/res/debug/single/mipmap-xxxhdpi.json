@@ -1,5 +1,33 @@
 [
     {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/bg.png",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/bg.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/stop.png",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/stop.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/down.png",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/down.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/up.png",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/up.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/bg_emp.png",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/bg_emp.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/l.png",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/l.png"
+    },
+    {
+        "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/r.png",
+        "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/r.png"
+    },
+    {
         "merged": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
         "source": "/Users/user/Desktop/TechCrunch-Shenzhen-2017/phone/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     }
